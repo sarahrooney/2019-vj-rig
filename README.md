@@ -42,4 +42,5 @@ Everything else I tend to think of at top-level mixers -- trigger them via the k
 - figure out what to do with all these images to make this repo more transportable and avoid jank when vjing
 - three.js??
 - mixers/midi input would be great
+
 Hope to add more to this soon!
