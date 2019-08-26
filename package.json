@@ -1,0 +1,14 @@
+{
+  "name": "personal-playground",
+  "version": "1.0.0",
+  "description": "Sarah Rooney's artist website",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "require-dir": "^1.2.0"
+  },
+  "devDependencies": {
+    "gulp-webserver": "^0.9.1"
+  }
+}

@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BITxBIT</title>
+
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" />
+  	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+  	<!--  UTILS -->
+    <script type="text/javascript" src="js/utils/creative_coding.js"></script>
+    <script type="text/javascript" src="js/utils/canvas.js"></script>
+    <script type="text/javascript" src="js/utils/mic.js"></script>
+    <script type="text/javascript" src="js/utils/draw_images.js"></script>
+    <script type="text/javascript" src="js/utils/draw_windows.js"></script>
+    <script type="text/javascript" src="js/utils/ui.js"></script>
+    <script type="text/javascript" src="js/utils/keypress.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/utils/particle_engine.js"></script>
+
+  </head>
+  <body>
+
+    <div style="display:none;">
+      <img id="floatingflowers"
+           src="./assets/img/floatingflower.gif"
+           data-width="90" data-height="217"
+           width="90" height="217">
+      <img id="glitterroses"
+           src="./assets/img/glitterroses.gif"
+           data-width="288" data-height="375"
+           width="288" height="375">
+      <img id="candybardolls"
+           src="./assets/img/candybardolls.gif"
+           data-width="190" data-height="290"
+           width="190" height="290">
+      <img id="purpleflower"
+           src="./assets/img/purpleflower.gif"
+           data-width="80" data-height="165"
+           width="80" height="165">
+      <img id="redrose"
+           src="./assets/img/redrose.gif"
+           data-width="63" data-height="217"
+           width="63" height="217">
+      <img id="blackheart"
+           src="./assets/img/blackheart.gif"
+           data-width="110" data-height="215"
+           width="110" height="215">
+      <img id="butterflyrose"
+           src="./assets/img/butterflyrose.gif"
+           data-width="340" data-height="346"
+           width="340" height="346">
+      <img id="sakura"
+           src="./assets/img/sakura.gif"
+           data-width="500" data-height="300"
+           width="500" height="300">
+      <img id="rainbowcircle"
+           src="./assets/img/rainbowcircle.gif"
+           data-width="363" data-height="369"
+           width="363" height="369">
+      <img id="flowerbranch"
+           src="./assets/img/flowerbranch.gif"
+           data-width="90" data-height="263"
+           width="90" height="263">
+
+      <img id="flowerfield"
+           src="./assets/img/flowerfield.png"
+           data-width="800" data-height="600"
+           width="800" height="600">
+      <img id="i-love-u-txt"
+           src="./assets/img/i-love-u-txt.gif"
+           data-width="100" data-height="120"
+           width="100" height="120">
+      <img id="love-you-phone"
+           src="./assets/img/love-you-phone.gif"
+           data-width="80" data-height="135"
+           width="80" height="135">
+      <img id="pink-necklace"
+           src="./assets/img/pink-necklace.gif"
+           data-width="84" data-height="84"
+           width="84" height="84">
+      <img id="pink-phone"
+           src="./assets/img/pink-phone.gif"
+           data-width="75" data-height="83"
+           width="75" height="83">
+      <img id="fairy-wings"
+           src="./assets/img/fairy-wings.gif"
+           data-width="95" data-height="65"
+           width="95" height="65">
+
+      <img id="animemoon"
+           src="./assets/img/animemoon.jpg"
+           data-width="200" data-height="200"
+           width="200" height="200">
+      <img id="animemoon2"
+           src="./assets/img/animemoon2.gif"
+           data-width="448" data-height="335"
+           width="448" height="335">
+      <img id="moon"
+           src="./assets/img/moon.gif"
+           data-width="460" data-height="400"
+           width="460" height="400">
+      <img id="purpletrees"
+           src="./assets/img/purpletrees.gif"
+           data-width="472" data-height="450"
+           width="472" height="450">
+      <img id="pinkglitter"
+           src="./assets/img/pinkglitter.gif"
+           data-width="420" data-height="420"
+           width="420" height="420">
+      <img id="scribblehearts"
+           src="./assets/img/scribblehearts.gif"
+           data-width="410" data-height="539"
+           width="410" height="539">
+      <img id="sadgirl"
+           src="./assets/img/sadgirl.jpg"
+           data-width="800" data-height="600"
+           width="800" height="600">
+      <img id="neonbutterflies"
+           src="./assets/img/neonbutterflies.gif"
+           data-width="308" data-height="262"
+           width="308" height="262">
+      <img id="heartswoop"
+           src="./assets/img/heartswoop.gif"
+           data-width="160" data-height="218"
+           width="160" height="218">
+      <img id="mirror"
+           src="./assets/img/mirror.gif"
+           data-width="450" data-height="450"
+           width="450" height="450">
+      <img id="illusion"
+           src="./assets/img/illusion.jpg"
+           data-width="800" data-height="600"
+           width="800" height="600">
+      <img id="wind"
+           src="./assets/img/wind.jpg"
+           data-width="800" data-height="375"
+           width="800" height="375">
+      <img id="palm"
+           src="./assets/img/palm.gif"
+           data-width="355" data-height="262"
+           width="355" height="262">
+      <img id="beach"
+           src="./assets/img/beach.jpg"
+           data-width="500" data-height="400"
+           width="500" height="400">
+      <img id="resort3"
+           src="./assets/img/resort3.gif"
+           data-width="400" data-height="200"
+           width="400" height="200">
+      <img id="resort4"
+           src="./assets/img/resort4.gif"
+           data-width="400" data-height="200"
+           width="400" height="200">
+      <img id="resort2"
+           src="./assets/img/resort2.png"
+           data-width="256" data-height="224"
+           width="256" height="224">
+      <img id="resort1"
+           src="./assets/img/resort1.png"
+           data-width="256" data-height="224"
+           width="256" height="224">
+      <img id="stuckinthepalms"
+           src="./assets/img/stuckinthepalms.png"
+           data-width="256" data-height="224"
+           width="256" height="224">
+      <img id="moreofthis"
+           src="./assets/img/moreofthis.png"
+           data-width="256" data-height="224"
+           width="256" height="224">
+      <img id="strawberrysuit"
+           src="./assets/img/strawberrysuit.jpg"
+           data-width="800" data-height="600"
+           width="800" height="600">
+      <img id="beachgirl"
+           src="./assets/img/beachgirl.gif"
+           data-width="373" data-height="432"
+           width="373" height="432">
+
+      <img id="poolandpalms"
+           src="./assets/img/poolandpalms.gif"
+           data-width="400" data-height="200"
+           width="400" height="200">
+      <img id="paradiseresort"
+           src="./assets/img/paradise-resort.gif"
+           data-width="400" data-height="200"
+           width="400" height="200">
+      <img id="ocean"
+           src="./assets/img/ocean.gif"
+           data-width="400" data-height="200"
+           width="400" height="200">
+      <img id="oceansunset"
+           src="./assets/img/ocean-sunset.gif"
+           data-width="400" data-height="200"
+           width="400" height="200">
+      <img id="icypalms"
+           src="./assets/img/icy-palms.gif"
+           data-width="400" data-height="200"
+           width="400" height="200">
+      <img id="gonesailing"
+           src="./assets/img/gone-sailing.gif"
+           data-width="400" data-height="200"
+           width="400" height="200">
+      <img id="sunsetpool"
+           src="./assets/img/sunsetpool.gif"
+           data-width="400" data-height="200"
+           width="400" height="200">
+      <img id="bubblepopphone"
+           src="./assets/img/bubblepop-phone.gif"
+           data-width="120" data-height="366"
+           width="120" height="366">
+
+      <img id="chuu"
+           src="./assets/img/chuu.gif"
+           data-width="533" data-height="400"
+           width="533" height="400">
+      <img id="gothiclolitagirl"
+           src="./assets/img/gothiclolitagirl.jpg"
+           data-width="600" data-height="477"
+           width="600" height="477">
+      <img id="chobits"
+           src="./assets/img/chobits.jpg"
+           data-width="640" data-height="480"
+           width="640" height="480">
+      <img id="darkangel"
+           src="./assets/img/darkangel.jpg"
+           data-width="600" data-height="450"
+           width="600" height="450">
+      <img id="gracefulmoon"
+           src="./assets/img/gracefulmoon.jpg"
+           data-width="600" data-height="450"
+           width="600" height="450">
+      <img id="horserun"
+           src="./assets/img/horserun1.gif"
+           data-width="307" data-height="378"
+           width="307" height="378">
+      <img id="firepony"
+           src="./assets/img/firepony.gif"
+           data-width="297" data-height="325"
+           width="297" height="325">
+      <img id="cloudpony"
+           src="./assets/img/cloudpony.gif"
+           data-width="279" data-height="326"
+           width="279" height="326">
+      <img id="yencat"
+           src="./assets/img/yencat.gif"
+           data-width="58" data-height="50"
+           width="58" height="50">
+      <img id="coin"
+           src="./assets/img/coin.gif"
+           data-width="130" data-height="130"
+           width="130" height="130">
+      <img id="envelope"
+           src="./assets/img/envelope.gif"
+           data-width="105" data-height="128"
+           width="105" height="128">
+      <img id="circle-chain"
+           src="./assets/img/circle-chain1.gif"
+           data-width="432" data-height="432"
+           width="432" height="432">
+      <img id="spiral-chain"
+           src="./assets/img/spiral-chain1.gif"
+           data-width="245" data-height="245"
+           width="245" height="245">
+      <img id="love-chain"
+           src="./assets/img/love-chain.gif"
+           data-width="160" data-height="72"
+           width="160" height="72">
+      <img id="twist-chain"
+           src="./assets/img/twist-chain.gif"
+           data-width="180" data-height="50"
+           width="180" height="50">
+      <img id="bluebutterfly"
+           src="./assets/img/bluebutterfly1.gif"
+           data-width="240" data-height="240"
+           width="240" height="240">
+      <img id="pinkbutterfly"
+           src="./assets/img/pinkbutterfly.gif"
+           data-width="180" data-height="127"
+           width="180" height="127">
+      <img id="purplebutterfly"
+           src="./assets/img/purplebutterfly.gif"
+           data-width="225" data-height="225"
+           width="225" height="225">
+      <img id="purplebutterfly"
+           src="./assets/img/purplebutterfly.gif"
+           data-width="225" data-height="225"
+           width="225" height="225">
+      <img id="girlbandanadance"
+           src="./assets/img/girlbandanadance.gif"
+           data-width="85" data-height="78"
+           width="85" height="78">
+      <img id="swaythosehips"
+           src="./assets/img/swaythosehips.gif"
+           data-width="44" data-height="100"
+           width="44" height="100">
+      <img id="girlpinkdance"
+           src="./assets/img/girlpinkdance.gif"
+           data-width="114" data-height="130"
+           width="114" height="130">
+      <img id="dancinggroup"
+           src="./assets/img/dancing-group.gif"
+           data-width="128" data-height="79"
+           width="128" height="79">
+      <img id="dancingred"
+           src="./assets/img/dancingred.gif"
+           data-width="61" data-height="153"
+           width="61" height="153">
+      <img id="dancingcatgirl"
+           src="./assets/img/dancingcatgirl.gif"
+           data-width="95" data-height="160"
+           width="95" height="160">
+      <img id="cutephone"
+           src="./assets/img/cute-phone.gif"
+           data-width="126" data-height="94"
+           width="126" height="94">
+      <img id="welcomephone"
+           src="./assets/img/welcome-phone.gif"
+           data-width="142" data-height="122"
+           width="142" height="122">
+      <img id="hellophone"
+           src="./assets/img/hello-phone.gif"
+           data-width="179" data-height="256"
+           width="179" height="256">
+      <img id="glitterrazor"
+           src="./assets/img/glitter-razor.gif"
+           data-width="200" data-height="304"
+           width="200" height="304">
+      <img id="love-necklace"
+           src="./assets/img/love-necklace.gif"
+           data-width="101" data-height="226"
+           width="101" height="226">
+      <img id="princesschain"
+           src="./assets/img/princess-chain.gif"
+           data-width="250" data-height="150"
+           width="250" height="150">
+      <img id="badgirlchain"
+           src="./assets/img/badgirl-chain.gif"
+           data-width="240" data-height="129"
+           width="240" height="129">
+      <img id="hand-dialing"
+           src="./assets/img/hand-dialing.gif"
+           data-width="350" data-height="332"
+           width="350" height="332">
+      <img id="flying-sparkles"
+           src="./assets/img/flying-sparkles.gif"
+           data-width="80" data-height="80"
+           width="80" height="80">
+      <img id="lovely-heart"
+           src="./assets/img/lovely-heart.gif"
+           data-width="90" data-height="90"
+           width="90" height="90">
+      <img id="blueheart"
+           src="./assets/img/blueheart.gif"
+           data-width="90" data-height="90"
+           width="90" height="90">
+      <img id="explosion"
+           src="./assets/img/explosion.gif"
+           data-width="90" data-height="90"
+           width="90" height="90">
+      <img id="roserect"
+           src="./assets/img/rose-rect.gif"
+           data-width="100" data-height="120"
+           width="100" height="120">
+      <img id="gonefishin"
+           src="./assets/img/gonefishin.gif"
+           data-width="69" data-height="64"
+           width="69" height="64">
+      <img id="gonefishin2"
+           src="./assets/img/gonefishin2.gif"
+           data-width="79" data-height="70"
+           width="79" height="70">
+      <img id="tamagotchi"
+           src="./assets/img/tamagotchi.gif"
+           data-width="80" data-height="87"
+           width="80" height="87">
+      <img id="palmsprite"
+           src="./assets/img/palmsprite.gif"
+           data-width="75" data-height="125"
+           width="75" height="125">
+
+      <img id="earthbound1"
+           src="./assets/vids/earthbound1.gif"
+           data-width="605" data-height="454"
+           width="605" height="454">
+      <img id="earthbound2"
+           src="./assets/vids/earthbound2.gif"
+           data-width="605" data-height="454"
+           width="605" height="454">
+      <img id="earthbound3"
+           src="./assets/vids/earthbound3.gif"
+           data-width="605" data-height="454"
+           width="605" height="454">
+      <img id="earthbound4"
+           src="./assets/vids/earthbound4.gif"
+           data-width="605" data-height="454"
+           width="605" height="454">
+      <img id="earthbound5"
+           src="./assets/vids/earthbound5.gif"
+           data-width="605" data-height="454"
+           width="605" height="454">
+      <img id="earthbound6"
+           src="./assets/vids/earthbound6.gif"
+           data-width="605" data-height="454"
+           width="605" height="454">
+      <img id="earthbound7"
+           src="./assets/vids/earthbound7.gif"
+           data-width="605" data-height="454"
+           width="605" height="454">
+      <img id="earthbound8"
+           src="./assets/vids/earthbound8.gif"
+           data-width="605" data-height="454"
+           width="605" height="454">
+
+      <img id="rockonness"
+           src="./assets/img/rockonness.gif"
+           data-width="80" data-height="96"
+           width="80" height="96">
+      <img id="tamagotchi2"
+           src="./assets/img/tamagotchi2.gif"
+           data-width="75" data-height="92"
+           width="75" height="92">
+      <img id="kirby"
+           src="./assets/img/kirby.gif"
+           data-width="80" data-height="97"
+           width="80" height="97">
+      <img id="chao"
+           src="./assets/img/chao.gif"
+           data-width="63" data-height="99"
+           width="63" height="99">
+      <img id="jumpinggameboy"
+           src="./assets/img/jumpinggameboy.gif"
+           data-width="33" data-height="81"
+           width="33" height="81">
+      <img id="dancingmushies"
+           src="./assets/img/dancingmushies.gif"
+           data-width="47" data-height="56"
+           width="47" height="56">
+      <img id="tutucat"
+           src="./assets/img/tutucat.gif"
+           data-width="75" data-height="125"
+           width="75" height="125">
+      <img id="emoticon"
+           src="./assets/img/emoticon.gif"
+           data-width="80" data-height="80"
+           width="80" height="80">
+    </div>
+
+    <div id="emptyWindow-VenoSci" class="window window--empty window--venosci">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <marquee><p>VENOSCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENOSCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENOSCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENOSCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENOSCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENOSCI<p></marquee>
+      </div>
+    </div>
+
+    <div id="emptyWindow-Ribbon" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="ribbongirl"
+           class="window-container-innergif"
+           src="./assets/img/ribbongirl.gif"
+           data-width="150" data-height="290"
+           width="150" height="290">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Lovely" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="lovely"
+           class="window-container-innergif"
+           src="./assets/img/lovely.gif"
+           data-width="288" data-height="200"
+           width="288" height="200">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Car" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="car"
+           class="window-container-innergif"
+           src="./assets/img/carrotate.gif"
+           data-width="457" data-height="192"
+           width="457" height="192">
+      </div>
+    </div>
+
+    <div id="emptyWindow-SNES" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="snes"
+           class="window-container-innergif"
+           src="./assets/img/24S4.gif"
+           style="filter:saturate(45);"
+           data-width="500" data-height="239"
+           width="500" height="239">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Butterfly" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="butterflywindow"
+           class="window-container-innergif"
+           src="./assets/img/bluebutterfly.gif"
+           data-width="480" data-height="480"
+           width="480" height="480">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Tamagotchi" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="tamagotchiwindow"
+           class="window-container-innergif"
+           src="./assets/img/tamagotchifly.gif"
+           data-width="250" data-height="250"
+           width="250" height="250">
+      </div>
+    </div>
+
+    <div id="emptyWindow-BlackHeart" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="blackheart"
+           class="window-container-innergif"
+           src="./assets/img/blackheart.gif"
+           data-width="100" data-height="225"
+           width="100" height="225">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Kissy" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="kissygirl"
+           class="window-container-innergif"
+           src="./assets/img/kissygirl.gif"
+           data-width="160" data-height="180"
+           width="160" height="180">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Unicorn" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="unicorn"
+           class="window-container-innergif"
+           src="./assets/img/unicorn.gif"
+           data-width="180" data-height="200"
+           width="180" height="200">
+      </div>
+    </div>
+
+    <div id="emptyWindow-CatandGirl" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="catandgirl"
+           class="window-container-innergif"
+           src="./assets/img/catandgirl.gif"
+           data-width="180" data-height="200"
+           width="180" height="200">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Candybar" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="candybardoll"
+           class="window-container-innergif"
+           src="./assets/img/candybardolls.gif"
+           data-width="200" data-height="320"
+           width="200" height="320">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Singing" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="singing"
+           class="window-container-innergif"
+           src="./assets/img/singing.gif"
+           data-width="165" data-height="185"
+           width="165" height="185">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Rainbow" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="rainbow"
+           class="window-container-innergif window-container-innergif--full"
+           src="./assets/img/rainbow.gif"
+           data-width="400" data-height="250"
+           width="400" height="250">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Piano" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="piano"
+           class="window-container-innergif window-container-innergif--full"
+           src="./assets/img/pianoroom.gif"
+           data-width="400" data-height="250"
+           width="400" height="250">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Bedroom" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="bedroom"
+           class="window-container-innergif window-container-innergif--full"
+           src="./assets/img/bedroom.gif"
+           data-width="400" data-height="250"
+           width="400" height="250">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Waterpark" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="waterpark"
+           class="window-container-innergif window-container-innergif--full"
+           src="./assets/img/waterpark.gif"
+           data-width="400" data-height="250"
+           width="400" height="250">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Watermelons" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="watermelons"
+           class="window-container-innergif window-container-innergif--full"
+           src="./assets/img/watermelons.gif"
+           data-width="400" data-height="250"
+           width="400" height="250">
+      </div>
+    </div>
+
+    <div id="emptyWindow-Sea" class="window window--empty">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img id="sea"
+           class="window-container-innergif window-container-innergif--full"
+           src="./assets/img/sea.gif"
+           data-width="400" data-height="250"
+           width="400" height="250">
+      </div>
+    </div>
+
+    <div id="Resort1" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/resort1.gif" alt="">
+      </div>
+    </div>
+
+    <img id="Resort1Full" class="video full" src="assets/vids/resort1.gif" alt="">
+
+    <div id="Resort2" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/resort2.gif" alt="">
+      </div>
+    </div>
+
+    <img id="Resort2Full" class="video full" src="assets/vids/resort2.gif" alt="">
+
+    <div id="Resort3" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/resort3.gif" alt="">
+      </div>
+    </div>
+
+    <img id="Resort3Full" class="video full" src="assets/vids/resort3.gif" alt="">
+
+    <div id="Resort4" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/resort4.gif" alt="">
+      </div>
+    </div>
+
+    <img id="Resort4Full" class="video full" src="assets/vids/resort4.gif" alt="">
+
+    <div id="Resort5" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/resort5.gif" alt="">
+      </div>
+    </div>
+
+    <img id="Resort5Full" class="video full" src="assets/vids/resort5.gif" alt="">
+
+    <div id="Resort6" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/resort6.gif" alt="">
+      </div>
+    </div>
+
+    <img id="Resort6Full" class="video full" src="assets/vids/resort6.gif" alt="">
+
+    <div id="Resort7" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/resort7.gif" alt="">
+      </div>
+    </div>
+
+    <img id="Resort7Full" class="video full" src="assets/vids/resort7.gif" alt="">
+
+    <img id="StaticFull" class="video full" src="assets/vids/static.gif" alt="">
+
+    <img id="undertale0Full" class="video full" src="assets/vids/undertale0.gif" alt="">
+
+    <div id="gameboyAnime0" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/img/gameboy1.gif" alt="">
+      </div>
+    </div>
+
+    <div id="gameboyAnime1" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/img/gameboy.gif" alt="">
+      </div>
+    </div>
+
+    <div id="imvuCityPopup0" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-city-0.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuCityPopup0Full" class="video full" src="assets/vids/IMVU-city-0.gif" alt="">
+
+    <div id="imvuCityPopup1" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-city-1.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuCityPopup1Full" class="video full" src="assets/vids/IMVU-city-1.gif" alt="">
+
+    <div id="imvuAmourPopup0" class="window imvu">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-amoursakura-0.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuAmourPopup0Full" class="video full" src="assets/vids/IMVU-amoursakura-0.gif" alt="">
+
+    <div id="imvuFrozenPopup0" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-frozen-fairies-0.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuFrozenPopup0Full" class="video full" src="assets/vids/IMVU-frozen-fairies-0.gif" alt="">
+
+    <div id="imvuFrozenPopup1" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-frozen-fairies-1.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuFrozenPopup1Full" class="video full" src="assets/vids/IMVU-frozen-fairies-1.gif" alt="">
+
+    <div id="imvuFrozenPopup2" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-frozen-fairies-2.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuFrozenPopup2Full" class="video full" src="assets/vids/IMVU-frozen-fairies-2.gif" alt="">
+
+    <div id="hands0" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/hands0.gif" alt="">
+      </div>
+    </div>
+
+    <div id="imvuCloseup0" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-closeup-0.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuCloseup0Full" class="video full" src="assets/vids/IMVU-closeup-0.gif" alt="">
+
+    <div id="imvuCloseup1" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-closeup-1.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuCloseup1Full" class="video full" src="assets/vids/IMVU-closeup-1.gif" alt="">
+
+    <div id="imvuCloseup2" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-closeup-2.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuCloseup2Full" class="video full" src="assets/vids/IMVU-closeup-2.gif" alt="">
+
+    <div id="imvuCloseup3" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-closeup-3.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuCloseup3Full" class="video full" src="assets/vids/IMVU-closeup-3.gif" alt="">
+
+    <div id="imvuCloseup4" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-closeup-4.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuCloseup4Full" class="video full" src="assets/vids/IMVU-closeup-4.gif" alt="">
+
+    <div id="imvuCloseup5" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-closeup-5.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuCloseup5Full" class="video full" src="assets/vids/IMVU-closeup-5.gif" alt="">
+
+    <div id="imvuCloseup6" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/IMVU-closeup-6.gif" alt="">
+      </div>
+    </div>
+
+    <img id="imvuCloseup6Full" class="video full" src="assets/vids/IMVU-closeup-6.gif" alt="">
+
+    <div id="lovelive0" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/lovelive0.gif" alt="">
+      </div>
+    </div>
+
+    <img id="lovelive0Full" class="video full" src="assets/vids/lovelive0.gif" alt="">
+
+    <div id="lovelive1" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/lovelive1.gif" alt="">
+      </div>
+    </div>
+
+    <img id="lovelive1Full" class="video full" src="assets/vids/lovelive1.gif" alt="">
+
+    <div id="lovelive2" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/lovelive2.gif" alt="">
+      </div>
+    </div>
+
+    <img id="lovelive2Full" class="video full" src="assets/vids/lovelive2.gif" alt="">
+
+    <div id="initiald1" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/initiald1.gif" alt="">
+      </div>
+    </div>
+
+    <img id="initiald1Full" class="video full" src="assets/vids/initiald1.gif" alt="">
+
+    <div id="initiald2" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/initiald2.gif" alt="">
+      </div>
+    </div>
+
+    <img id="initiald2Full" class="video full" src="assets/vids/initiald2.gif" alt="">
+
+    <div id="initiald3" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/initiald3.gif" alt="">
+      </div>
+    </div>
+
+    <img id="initiald3Full" class="video full" src="assets/vids/initiald3.gif" alt="">
+
+    <div id="initiald4" class="window imvu-frozen">
+      <div class="window-top"></div>
+      <div class="window-container">
+        <img class="video" src="assets/vids/initiald4.gif" alt="">
+      </div>
+    </div>
+
+    <img id="initiald4Full" class="video full" src="assets/vids/initiald4.gif" alt="">
+
+    <div class="imgCanvas"></div>
+
+
+
+    <img src=""
+      class="online-now-init online-now-1">
+    <img src=""
+      class="online-now-init online-now-2">
+    <img src=""
+      class="online-now-init online-now-3">
+    <img src=""
+      class="online-now-init online-now-4">
+    <img src=""
+      class="online-now-init online-now-5">
+    <img src=""
+      class="online-now-init online-now-6">
+    <img src=""
+      class="online-now-init online-now-7">
+    <img src=""
+      class="online-now-init online-now-8">
+    <img src=""
+      class="online-now-init online-now-9">
+    <img src=""
+      class="online-now-init online-now-10">
+
+    <img src=""
+      class="online-now-init online-now-init-2 online-now-1">
+    <img src=""
+      class="online-now-init online-now-init-2 online-now-2">
+    <img src=""
+      class="online-now-init online-now-init-2 online-now-3">
+    <img src=""
+      class="online-now-init online-now-init-2 online-now-4">
+    <img src=""
+      class="online-now-init online-now-init-2 online-now-5">
+    <img src=""
+      class="online-now-init online-now-init-2 online-now-6">
+    <img src=""
+      class="online-now-init online-now-init-2 online-now-7">
+    <img src=""
+      class="online-now-init online-now-init-2 online-now-8">
+    <img src=""
+      class="online-now-init online-now-init-2 online-now-9">
+    <img src=""
+      class="online-now-init online-now-init-2 online-now-10">
+
+    <img src=""
+      class="online-now-init online-now-init-3 online-now-1">
+    <img src=""
+      class="online-now-init online-now-init-3 online-now-2">
+    <img src=""
+      class="online-now-init online-now-init-3 online-now-3">
+    <img src=""
+      class="online-now-init online-now-init-3 online-now-4">
+    <img src=""
+      class="online-now-init online-now-init-3 online-now-5">
+    <img src=""
+      class="online-now-init online-now-init-3 online-now-6">
+    <img src=""
+      class="online-now-init online-now-init-3 online-now-7">
+    <img src=""
+      class="online-now-init online-now-init-3 online-now-8">
+    <img src=""
+      class="online-now-init online-now-init-3 online-now-9">
+    <img src=""
+      class="online-now-init online-now-init-3 online-now-10">
+
+    <img src=""
+      class="online-now-init online-now-init-4 online-now-1">
+    <img src=""
+      class="online-now-init online-now-init-4 online-now-2">
+    <img src=""
+      class="online-now-init online-now-init-4 online-now-3">
+    <img src=""
+      class="online-now-init online-now-init-4 online-now-4">
+    <img src=""
+      class="online-now-init online-now-init-4 online-now-5">
+    <img src=""
+      class="online-now-init online-now-init-4 online-now-6">
+    <img src=""
+      class="online-now-init online-now-init-4 online-now-7">
+    <img src=""
+      class="online-now-init online-now-init-4 online-now-8">
+    <img src=""
+      class="online-now-init online-now-init-4 online-now-9">
+    <img src=""
+      class="online-now-init online-now-init-4 online-now-10">
+
+    <img src=""
+      class="online-now-init online-now-init-5 online-now-1">
+    <img src=""
+      class="online-now-init online-now-init-5 online-now-2">
+    <img src=""
+      class="online-now-init online-now-init-5 online-now-3">
+    <img src=""
+      class="online-now-init online-now-init-5 online-now-4">
+    <img src=""
+      class="online-now-init online-now-init-5 online-now-5">
+    <img src=""
+      class="online-now-init online-now-init-5 online-now-6">
+    <img src=""
+      class="online-now-init online-now-init-5 online-now-7">
+    <img src=""
+      class="online-now-init online-now-init-5 online-now-8">
+    <img src=""
+      class="online-now-init online-now-init-5 online-now-9">
+    <img src=""
+      class="online-now-init online-now-init-5 online-now-10">
+
+    <img src=""
+      class="online-now-init online-now-init-6 online-now-1">
+    <img src=""
+      class="online-now-init online-now-init-6 online-now-2">
+    <img src=""
+      class="online-now-init online-now-init-6 online-now-3">
+    <img src=""
+      class="online-now-init online-now-init-6 online-now-4">
+    <img src=""
+      class="online-now-init online-now-init-6 online-now-5">
+    <img src=""
+      class="online-now-init online-now-init-6 online-now-6">
+    <img src=""
+      class="online-now-init online-now-init-6 online-now-7">
+    <img src=""
+      class="online-now-init online-now-init-6 online-now-8">
+    <img src=""
+      class="online-now-init online-now-init-6 online-now-9">
+    <img src=""
+      class="online-now-init online-now-init-6 online-now-10">
+
+    <img src=""
+      class="online-now-init online-now-init-7 online-now-1">
+    <img src=""
+      class="online-now-init online-now-init-7 online-now-2">
+    <img src=""
+      class="online-now-init online-now-init-7 online-now-3">
+    <img src=""
+      class="online-now-init online-now-init-7 online-now-4">
+    <img src=""
+      class="online-now-init online-now-init-7 online-now-5">
+    <img src=""
+      class="online-now-init online-now-init-7 online-now-6">
+    <img src=""
+      class="online-now-init online-now-init-7 online-now-7">
+    <img src=""
+      class="online-now-init online-now-init-7 online-now-8">
+    <img src=""
+      class="online-now-init online-now-init-7 online-now-9">
+    <img src=""
+      class="online-now-init online-now-init-7 online-now-10">
+
+    <img src=""
+      class="online-now-init online-now-init-8 online-now-1">
+    <img src=""
+      class="online-now-init online-now-init-8 online-now-2">
+    <img src=""
+      class="online-now-init online-now-init-8 online-now-3">
+    <img src=""
+      class="online-now-init online-now-init-8 online-now-4">
+    <img src=""
+      class="online-now-init online-now-init-8 online-now-5">
+    <img src=""
+      class="online-now-init online-now-init-8 online-now-6">
+    <img src=""
+      class="online-now-init online-now-init-8 online-now-7">
+    <img src=""
+      class="online-now-init online-now-init-8 online-now-8">
+    <img src=""
+      class="online-now-init online-now-init-8 online-now-9">
+    <img src=""
+      class="online-now-init online-now-init-8 online-now-10">
+
+    <img src=""
+      class="online-now-init online-now-init-9 online-now-1">
+    <img src=""
+      class="online-now-init online-now-init-9 online-now-2">
+    <img src=""
+      class="online-now-init online-now-init-9 online-now-3">
+    <img src=""
+      class="online-now-init online-now-init-9 online-now-4">
+    <img src=""
+      class="online-now-init online-now-init-9 online-now-5">
+    <img src=""
+      class="online-now-init online-now-init-9 online-now-6">
+    <img src=""
+      class="online-now-init online-now-init-9 online-now-7">
+    <img src=""
+      class="online-now-init online-now-init-9 online-now-8">
+    <img src=""
+      class="online-now-init online-now-init-9 online-now-9">
+    <img src=""
+      class="online-now-init online-now-init-9 online-now-10">
+
+    <img src=""
+      class="online-now-init online-now-init-10 online-now-1">
+    <img src=""
+      class="online-now-init online-now-init-10 online-now-2">
+    <img src=""
+      class="online-now-init online-now-init-10 online-now-3">
+    <img src=""
+      class="online-now-init online-now-init-10 online-now-4">
+    <img src=""
+      class="online-now-init online-now-init-10 online-now-5">
+    <img src=""
+      class="online-now-init online-now-init-10 online-now-6">
+    <img src=""
+      class="online-now-init online-now-init-10 online-now-7">
+    <img src=""
+      class="online-now-init online-now-init-10 online-now-8">
+    <img src=""
+      class="online-now-init online-now-init-10 online-now-9">
+    <img src=""
+      class="online-now-init online-now-init-10 online-now-10">
+
+
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+  </body>
+</html>
