@@ -1,15 +1,15 @@
 var gulp = require('gulp');
-var webserver = require('gulp-webserver');
+var connect = require('gulp-connect');
+var https = require('https');
+var fs = require('fs');
 
 gulp.task('server', function() {
-  gulp.src('./')
-    .pipe(webserver({
-      host: 'localhost',
-      livereload: true,
-      open: true,
-      https: {
-        key: './server.key',
-        cert: './server.crt'
-      }
-    }));
+  connect.server({
+    root: './',
+    livereload: true,
+    https: {
+      key: fs.readFileSync('./server.key'),
+      cert: fs.readFileSync('./server.crt')
+    }
+  });
 });

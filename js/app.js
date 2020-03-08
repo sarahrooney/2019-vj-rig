@@ -7,6 +7,18 @@ var ctx = createCanvas( 'canvas1' );
 var ctx2 = createCanvas( 'canvas2' );
 var ctx3 = createCanvas( 'canvas3' );
 
+// video element
+var video = document.querySelector("#videoElement");
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+  .then(function (stream) {
+    video.srcObject = stream;
+  })
+  .catch(function (err0r) {
+    console.log("Something went wrong!");
+  });
+}
+
 var art_location = "/content";
 
 var fileref;

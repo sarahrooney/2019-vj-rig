@@ -1,3 +1,5 @@
+video.style.display = "none";
+
 bitScript = function() {
   ctx.background(0,0,100);
   var pinks = [
@@ -29,7 +31,7 @@ bitScript = function() {
   var max_bigBalls = 30
   var bigBalls = []
 
-  for (var i = 0; i < max_balls; i++) {0
+  for (var i = 0; i < max_balls; i++) {
     addBall();
   }
 

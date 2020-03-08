@@ -1,6 +1,11 @@
-function drawWindows(id, hue, scale) {
-  var randTop = randomInt(-100, 50)
-      randLeft = randomInt(-100, 50);
+function drawWindows(id, hue, scale, center, blendMode) {
+  if (center==true) {
+    var randTop = randomInt(-15, -25)
+        randLeft = randomInt(-15, -25);
+  } else {
+    var randTop = randomInt(-100, 50)
+        randLeft = randomInt(-100, 50);
+  }
 
   var miniWindow = document.getElementById(id);
 
@@ -9,6 +14,9 @@ function drawWindows(id, hue, scale) {
     elem.style.transformOrigin = "top left";
     elem.style.transform = "translate(" + randLeft + "%," + randTop + "%) scale(" + 0.4 + ")";
     elem.style.display = "block";
+    if(blendMode==true) {
+      elem.style.mixBlendMode = "difference";
+    }
     elem.classList.add("gen");
   }
 

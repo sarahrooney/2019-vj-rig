@@ -1,4 +1,5 @@
 body {
+  position: relative;
   height: 100vh;
   font-family: Helvetica, arial, serif;
   color: #fff;
@@ -31,6 +32,24 @@ canvas {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+
+img {
+  image-rendering: optimizeSpeed;
+}
+
+#videoElement {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  min-width: 100vw;
+  width: auto;
+  min-height: 100vh;
+  height: auto;
+  background-color: transparent;
 }
 
 .window {

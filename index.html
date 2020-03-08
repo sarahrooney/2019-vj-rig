@@ -17,10 +17,10 @@
     <script type="text/javascript" src="js/utils/keypress.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script type="text/javascript" src="js/utils/particle_engine.js"></script>
+    <!-- <script type="text/javascript" src="js/utils/particle_engine.js"></script> -->
 
   </head>
-  <body>
+  <body id="app">
 
     <div style="display:none;">
       <img id="floatingflowers"
@@ -315,10 +315,6 @@
            src="./assets/img/cute-phone.gif"
            data-width="126" data-height="94"
            width="126" height="94">
-      <img id="welcomephone"
-           src="./assets/img/welcome-phone.gif"
-           data-width="142" data-height="122"
-           width="142" height="122">
       <img id="hellophone"
            src="./assets/img/hello-phone.gif"
            data-width="179" data-height="256"
@@ -445,14 +441,28 @@
            src="./assets/img/emoticon.gif"
            data-width="80" data-height="80"
            width="80" height="80">
+
+      <img id="error"
+           src="./assets/img/error.png"
+           data-width="180" data-height="180"
+           width="180" height="180">
+      <img id="automatic-updates"
+           src="./assets/img/automatic_updates_popup.png"
+           data-width="428" data-height="139"
+           width="428" height="139">
+
+      <img id="saskrotch"
+           src="./assets/img/saskrotch-banner-sm.png"
+           data-width="600" data-height="119"
+           width="600" height="119">
     </div>
 
-    <div id="emptyWindow-VenoSci" class="window window--empty window--venosci">
+    <!-- <div id="emptyWindow-VenoSci" class="window window--empty window--venosci">
       <div class="window-top"></div>
       <div class="window-container">
         <marquee><p>VENOSCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENOSCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENOSCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENOSCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENOSCI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENOSCI<p></marquee>
       </div>
-    </div>
+    </div> -->
 
     <div id="emptyWindow-Ribbon" class="window window--empty">
       <div class="window-top"></div>
@@ -923,8 +933,6 @@
 
     <div class="imgCanvas"></div>
 
-
-
     <img src=""
       class="online-now-init online-now-1">
     <img src=""
@@ -1136,6 +1144,7 @@
       class="online-now-init online-now-init-10 online-now-10">
 
 
+    <video autoplay="true" id="videoElement"></video>
 
     <script type="text/javascript" src="js/app.js"></script>
 

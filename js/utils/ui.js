@@ -78,3 +78,7 @@ function removeGenImgs() {
     }
   }
 }
+
+function hideVideo() {
+  video.style.display = "none";
+}

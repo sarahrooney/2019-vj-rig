@@ -1,3 +1,5 @@
+video.style.display = "none";
+
 bitScript = function() {
   ctx.background(0);
 

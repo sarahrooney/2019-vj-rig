@@ -6,9 +6,11 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
+    "pixi.js": "^5.1.5",
     "require-dir": "^1.2.0"
   },
   "devDependencies": {
-    "gulp-webserver": "^0.9.1"
+    "fs": "0.0.1-security",
+    "https": "^1.0.0"
   }
 }

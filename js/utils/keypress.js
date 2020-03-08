@@ -36,6 +36,9 @@ function onKeyDown(event) {
   } else if (keyCode == 32) {
     // ~ REMOVE GENERATED GIFS SPACEBAR
     removeGenImgs();
+  } else if (keyCode == 191) {
+    // ~ HIDE VIDEO STREAM /
+    hideVideo();
   }
 }
 
